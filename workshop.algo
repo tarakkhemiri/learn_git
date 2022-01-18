@@ -1,0 +1,33 @@
+ALGORITHM Checkpoint
+VAR
+   
+   c: Char ;
+   nbC, nbS, nbV, nbW : Integer;
+
+BEGIN
+    nbC :=0 ;
+    nbS :=0 ;
+    nbV :=0 ; 
+    nbW :=0 ; 
+
+    while ( c<> '.') 
+    Read (c); 
+  nbC++
+
+IF (c =' ')) THEN
+  nbS ++
+END_IF
+
+IF (c = 'e' OR c = 'e' OR c = 'i' OR c = 'o' OR c = 'u') THEN
+  nbV ++
+END_IF
+
+END While 
+ 
+ NbW = NbS + 1 ; 
+
+ Write ("Lengh of the sentence =" nbC) ;
+ Write ("Number of Words=" nbW) ;
+ Write ("Number of vowels=" nbV) ;
+
+END
