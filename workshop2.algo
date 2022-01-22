@@ -1,0 +1,138 @@
+ALGORITHM problem1 - Way 1 
+VAR
+    set1 : array of Integer 
+    set2 : array of Integer 
+    sum : Integer 
+
+
+BEGIN
+sum =0 ; 
+for (let i = 0; i <set1.length -1; i++) Step 1 do 
+    for (let j = 0; j <set2.length -1; j++) do
+       IF (set1[i] = set2[j])) THEN
+          
+          Else
+          sum = sum + set1[i]  
+    END_IF
+end for
+end for
+
+for (let i = 0; i <set1.length -1; i++) Step 1 do 
+    for (let j = 0; j <set2.length -1; j++) do
+    IF (set2[i] <> set1[j])) THEN
+        sum = sum + set2[i]  
+    END_IF
+end for
+end for
+
+
+END
+
+
+
+ALGORITHM problem1 - Way 2 
+VAR
+    set1 : array of Integer 
+    set2 : array of Integer 
+   htab1 : HASH_TABLE<INTEGER,INTEGER>;
+   htab2 : HASH_TABLE<INTEGER,INTEGER>;
+
+
+
+    sum : Integer 
+
+
+BEGIN
+
+sum =0 ; 
+
+For (let i = 0; i <set1.length -1, i++) Step 1 DO
+
+htab1.insert(i,set1[i]); 
+htab2.insert(i,set2[i]);
+
+end for 
+
+
+
+For (let i = 0; i <set1.length -1, i++) Step 1 DO
+
+ IF  (htab1.lookup(set2[i]) = False) THEN
+sum = sum + set2[i] ;
+END_IF
+
+ IF  (htab2.lookup(set1[i]) = False) THEN
+sum = sum + set1[i] ;
+
+
+
+end for 
+
+
+
+
+
+
+END
+
+
+ALGORITHM problem2 - Way 1 
+VAR
+    set1 : array of Integer 
+    set2 : array of Integer 
+    sum : Integer 
+
+
+BEGIN
+sum =0 ; 
+for (let i = 0; i <set1.length -1; i++) Step 1 do 
+    for (let j = 0; j <set2.length -1; j++) do
+    IF (set1[i] = set2[j])) THEN
+        sum = sum + set1[i]) * 2   
+    END_IF
+end for
+end for
+
+
+
+END
+
+
+
+
+
+ALGORITHM problem2 - Way 2 
+VAR
+    set1 : array of Integer 
+    set2 : array of Integer 
+   htab1 : HASH_TABLE<INTEGER,INTEGER>;
+   htab2 : HASH_TABLE<INTEGER,INTEGER>;
+
+
+
+    sum : Integer 
+
+
+BEGIN
+
+sum =0 ; 
+
+For (let i = 0; i <set1.length -1, i++) Step 1 DO
+
+htab1.insert(i,set1[i]); 
+htab2.insert(i,set2[i]);
+
+end for 
+
+
+
+For (let i = 0; i <set1.length -1, i++) Step 1 DO
+
+ IF  (htab1.lookup(set2[i]) = True) THEN
+sum = sum + set2[i]*2 ;
+
+END_IF
+
+end for 
+
+END
