@@ -1,0 +1,25 @@
+PROCEDURE calculate(v1:array of INTEGER, v2:array of INTEGER,var ps:INTEGER)
+VAR
+    i,j:=0:INTEGER
+
+BEGIN
+    FOR i FROM 0 TO v1.length-1 STEP 1  DO
+        FOR j FROM 0 TO v2.length-1 STEP 1  DO
+            ps:=v1[i]*v2[j]+ps
+        END_FOR
+    END_FOR
+END
+
+//--------------------------------------
+!ALGORITHM 
+VAR
+    arr1:array of INTEGER
+    arr2:array of INTEGER
+    x:INTEGER:=0
+BEGIN
+    calculate(arr1,arr2,x)
+    IF (x==0) THEN
+        write("congrats! they are orthogonal")
+    END_IF
+    write("sadly!they are not orthogonal")
+END

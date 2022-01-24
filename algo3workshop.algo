@@ -1,0 +1,37 @@
+FUNCTION product(v1 : array of INTEGER,v2 : of INTEGER) : Integer
+VAR
+    ps : Integer
+    i : Integer 
+BEGIN
+
+
+// V1(1) X V2(1) + V1(2) X V2(2) + 
+ps =0 ;
+
+FOR i FROM 0 TO v1.length-1  STEP 1  DO
+    ps = ps + v1[i] * v2[i] ;
+    
+END_FOR
+
+    RETURN ps ;
+END
+
+----
+
+ALGORITHM product
+VAR
+    arr1, arr2 array of INTEGER ;
+    x : Integer
+
+BEGIN
+    
+
+    x =  product(arr1,arr2) 
+
+IF (x=0)) THEN
+    write ("Yes ! Orthogonal")
+
+END_IF
+  write ("No ! Not Orthogonal")
+
+END
