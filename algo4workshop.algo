@@ -1,0 +1,31 @@
+
+ALGORITHM algorithm_name
+VAR
+    hand: array of INTEGER
+    card: INTEGER
+    positionCard: INTEGER
+
+BEGIN
+    
+   //Find the card position 
+    for i from 0 to n-1
+IF ( card > hand[i]) THEN
+    positionCard = i-1 
+
+END_IF
+
+   //Dezz les positions  
+for i from positionCard to n-1
+hand[i] = hand[i+1]
+end for
+
+   //Mettre la carte dans sa position
+hand[positionCard] = card
+
+
+END
+
+
+
+
+
